@@ -2640,7 +2640,7 @@
       {/if}
       <div class="run-btn" style="margin-right: 5px; position:relative;">
         <div class="d-flex" style="gap: 8px;">
-          {#if isRunButtonEnabled}
+          {#if isRunButtonEnabled && !($tab?.property?.testflow?.state?.testflowNavigator === TestflowNavigatorEnum.TESTDATA)}
             {#if testflowStore?.isTestFlowRunning}
               <Button
                 type="secondary"
